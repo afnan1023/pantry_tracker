@@ -17,7 +17,6 @@ import { useRouter } from "next/navigation";
 import Alert from "@mui/material/Alert"; // Import Alert component
 
 const defaultTheme = createTheme();
-
 function Copyright(props) {
   return (
     <Typography
@@ -125,32 +124,31 @@ export default function SignIn() {
             >
               Sign In
             </Button>
-          </Box>
-          <Link href="/" passHref>
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{
-                mt: 1,
-                mb: 2,
-                backgroundColor: "#DD682B",
-                "&:hover": {
-                  backgroundColor: "#B1541D",
-                },
-              }}
-            >
-              Back
-            </Button>
-          </Link>
-          <Grid container>
-            <Grid item>
-              <Link href="/signup" passHref>
-                <Typography variant="body2">
-                  Don&apos;t have an account? Sign Up
-                </Typography>
-              </Link>
+
+            <Link href="/" passHref>
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{
+                  mt: 1,
+                  mb: 2,
+                  backgroundColor: "#DD682B",
+                  "&:hover": {
+                    backgroundColor: "#B1541D",
+                  },
+                }}
+              >
+                Back
+              </Button>
+            </Link>
+            <Grid container>
+              <Grid item>
+                <Link href="/signup" variant="body2">
+                  Don't have an account? Sign Up
+                </Link>
+              </Grid>
             </Grid>
-          </Grid>
+          </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
